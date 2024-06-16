@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ABOUT JOB DESCRIPTION</h1>
+    {% if  hirect %}
+    <table border="2">
+        <thead>
+            <th>job Name</th>
+            <th>job adress</th>
+            <th>job salary</th>
+            <th>job age</th>
+        </thead>
+        {% for  js  in hirect %}
+        <tr>
+            <td>{{js.jobname}}</td>
+            <td>{{js.jobid}}</td>
+            <td>{{js.jobsal}}</td>
+            <td>{{js.jobage}}</td>
+            <!-- <td></td> -->
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <p>NO JOBS FOUND</p>
+  {%endif%}
+</body>
+</html>
